@@ -2,8 +2,8 @@
 // Created by wxian on 2024/5/9.
 //
 
-#ifndef IMAGEFILEBROSWER_H
-#define IMAGEFILEBROSWER_H
+#ifndef SIMPLEWIDGET_H
+#define SIMPLEWIDGET_H
 
 
 #include "ui_SimpleWidget.h"
@@ -22,4 +22,4 @@ private:
 };
 
 
-#endif //IMAGEFILEBROSWER_H
+#endif //SIMPLEWIDGET_H

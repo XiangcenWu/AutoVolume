@@ -1,29 +1,17 @@
-#include "Logic/SimpleWidget/SimpleWidget.h"
-#include <QApplication>
-#include "../ImageLoader/image_loader.cpp"
+#include "MainWindow.h"
+#include "ImageLoader.h"
+#include <QStyleFactory>
+#include <iostream>
+
 
 int main(int argc, char *argv[])
 {
 
-    using ImageType = itk::Image<float, 3>;
-    ImageType::Pointer image = LoadNiftiImage<ImageType>("C:/Users/wxian/Downloads/data/data/001000_img.nii");
-
-    if (image.IsNotNull())
-    {
-        std::cout << "Image loaded successfully!" << std::endl;
-        std::cout << "Image size: " << image->GetLargestPossibleRegion().GetSize() << std::endl;
-    }
-    else
-    {
-        std::cerr << "Failed to load image." << std::endl;
-        return EXIT_FAILURE;
-    }
-
-
-
-
+    std::cout << test_image << std::endl;
     QApplication a(argc, argv);
-    SimpleWidget w;
+    MainWindow w;
+    w.setStyleSheet("QWidget { background-color: white; }");
     w.show();
     return a.exec();
 }
+
